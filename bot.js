@@ -138,4 +138,4 @@ break;
 };
 });
 
-bot.login("NDU3ODg3NDUzMzk1NjgxMjkw.DgfohQ.v5qc5fEYmZhDJ6tS1n17qDfA_C4");
+bot.login(process.env.TOKEN);
