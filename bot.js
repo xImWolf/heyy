@@ -160,7 +160,7 @@ console.log(err);
 return;
 }
 break;
-
+    }
     });
 
 bot.login(process.env.TOKEN);
