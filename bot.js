@@ -49,7 +49,6 @@ bot.on("message", message => {
 
 if(message.author.bot) return;
     if(!message.content.startsWith(prefix)) return;
-    if(message.guild.id == "431887036178497546") return message.channel.send("You cant use this bot on this server!");
 
     var args = message.content.substring(prefix.length).split(" ");
     switch (args[0].toLowerCase()) {
@@ -83,6 +82,7 @@ try {
 return;
 
 case "minecraft":
+if(message.guild.id == "431887036178497546") return message.channel.send("You cant use this bot on this server!");
 try {
 if(talkedRecently.has(message.author.id)) {
 message.channel.send(`${message.author.tag}, You need to wait at least 5 minutes to type !minecraft again!`);
@@ -109,6 +109,7 @@ message.reply("check DMs.");
 break;
 
 case "spotify":
+    if(message.guild.id == "431887036178497546") return message.channel.send("You cant use this bot on this server!");
 try {
 if(talkedRecently.has(message.author.id)) {
 message.channel.send(`${message.author.tag}, You need to wait at least 5 minutes to type !spotify again!`);
@@ -133,6 +134,19 @@ message.reply("check DMs. (make sure you dont have DMs disabled)");
   return;
 }
 break;
+		    
+case "stats":
+try {
+let embed = new Discord.RichEmbed()
+.setAuthor("Bot Stats", message.author.avatarURL)
+.setDescription("I am in " + bot.guilds.size + " guilds with " + bot.users.size + " users")
+.setColor(message.guild.members.get(bot.user.id).displayHexColor)
+.setFooter("Random thing :^)", bot.user.avatarURL)
+message.channel.send({embed});
+} catch (err) {
+	console.log(err);
+	return;
+}
 		    
 
 };
