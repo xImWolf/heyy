@@ -146,16 +146,6 @@ message.channel.send({embed});
 	console.log(err);
 	return;
 }
-
-case "invite":
-try {
-let embed = new Discord.RichEmbed()
-.setAuthor("Hey!! Invite me", bot.user.avatarURL)
-.setDescription("Here is my invite link!\n[Click me](https://discordapp.com/oauth2/authorize?client_id=457887453395681290&scope=bot&permissions=8)")
-} catch(err) {
-	console.log(err);
-	return;
-};
-});
+    });
 
 bot.login(process.env.TOKEN);
