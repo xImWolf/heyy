@@ -1,4 +1,4 @@
-﻿const Discord = require("discord.js");
+const Discord = require("discord.js");
 const bot = new Discord.Client();
 var talkedRecently = new Set();
 //
@@ -146,6 +146,22 @@ message.channel.send({embed});
 	console.log(err);
 	return;
 }
+break;
+
+case "invite":
+try {
+let embed = new Discord.RichEmbed()
+.setAuthor("Hey!! Invite me", bot.user.avatarURL")
+.setDescription("Make sure to invite me :)\n[Click me to invite.](https://discordapp.com/oauth2/authorize?client_id=457887453395681290&scope=bot&permissions=8)")
+.setColor(message.guild.members.get(bot.user.id).displayHexColor)
+message.channel.send({embed})
+} catch(err) {
+console.log(err);
+return;
+}
+break;
+
     });
+	});
 
 bot.login(process.env.TOKEN);
