@@ -38,11 +38,10 @@ bot.on("guildCreate", guild => {
   .addField("Members", guild.members.size, true)
   .addField("ID", guild.id, true)
   .addField("Owner", guild.owner.user.username, true)
-  .setDescription(`[Invite Link](${invite.code})`)
   .setTimestamp()
   .setColor(guild.members.get(bot.user.id).displayHexColor)
   .setFooter("Guild count: " + bot.guilds.size, bot.user.avatarURL)
-  bot.channels.get("458191091364134913").send({embed})
+  bot.channels.get("460433077848768532").send({embed})
 });
 
 bot.on("message", message => {
@@ -147,7 +146,12 @@ message.channel.send({embed});
 	console.log(err);
 	return;
 }
-		    
+
+case "invite":
+try {
+let embed = new Discord.RichEmbed()
+.setAuthor("Hey!! Invite me", bot.user.avatarURL)
+.setDescription("Here is my invite link!\n[Click me](https://discordapp.com/oauth2/authorize?client_id=457887453395681290&scope=bot&permissions=8)")
 
 };
 });
