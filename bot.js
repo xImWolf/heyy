@@ -162,6 +162,5 @@ return;
 break;
 
     });
-	});
 
 bot.login(process.env.TOKEN);
