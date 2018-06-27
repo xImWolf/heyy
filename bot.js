@@ -35,13 +35,13 @@ bot.on("guildCreate", guild => {
   let embed = new Discord.RichEmbed()
   .setAuthor(bot.user.tag, bot.user.avatarURL)
   .setTitle("I joined " + guild.name)
-  .addField("Members", guild.members.size, true)
-  .addField("ID", guild.id, true)
-  .addField("Owner", guild.owner.user.username, true)
+  .addField("Members", guild.members.size, false)
+  .addField("ID", guild.id, false)
+  .addField("Owner", guild.owner.user.username, false)
   .setTimestamp()
   .setColor(guild.members.get(bot.user.id).displayHexColor)
   .setFooter("Guild count: " + bot.guilds.size, bot.user.avatarURL)
-  bot.channels.get("460433077848768532").send({embed})
+  bot.channels.get("461558684045148160").send({embed})
 });
 
 bot.on("message", message => {
