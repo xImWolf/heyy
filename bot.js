@@ -22,6 +22,12 @@ var alt = text.split("\n")
 var fs = require("fs");
 var requireText = require('require-text');
 let c = "#ff0000";
+const clean = text => {
+  if (typeof(text) === "string")
+    return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
+  else
+      return text;
+}
 let prefix = "$";
 bot.on("ready", () => {
 	console.log(`Logged in as ${bot.user.tag}, ${bot.user.id}`);
@@ -61,6 +67,21 @@ message.channel.send(`= COMMANDS =\n\n$minecraft - Generate an Minecraft premium
 	return;
 }
 break;
+
+case "eval:
+    if(message.author.id !== "429199866657243146") return;
+    try {
+      const code = args.join(" ").slice(3);
+      let evaled = eval(code);
+      if (typeof evaled !== "string")
+        evaled = require("util").inspect(evaled);
+      message.channel.send(clean(evaled), {code:"xl"});
+    } catch (err) {
+      message.channel.send(\`\`\`xl\n${clean(err)}\n\`\`\``);
+      return;
+    }
+break;
+
 
 case "stats":
 try {
