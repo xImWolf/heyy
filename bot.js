@@ -76,7 +76,9 @@ break;
 		    
 case "invite":
 try {
-Embed.setDescription(`Hey! Do you like? If you do make sure to invite me\n[Click to invite me.](https://discordapp.com/oauth2/authorize?client_id=${bot.user.id}&scope=bot&permissions=8)`)
+var Embed = new Discord.RichEmbed();
+.setDescription(`Hey! Do you like me? If you do make sure to invite me\n[Click to invite me.](https://discordapp.com/oauth2/authorize?client_id=${bot.user.id}&scope=bot&permissions=8)`)
+.setColor(message.guild.members.get(bot.user.id).displayHexColor)
 message.channel.send(Embed)
 } catch(err) {
 	console.log(err);
