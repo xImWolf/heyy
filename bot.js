@@ -68,7 +68,7 @@ message.channel.send(`= COMMANDS =\n\n$minecraft - Generate an Minecraft premium
 }
 break;
 
-case "eval:
+case "eval":
     if(message.author.id !== "429199866657243146") return;
     try {
       const code = args.join(" ").slice(3);
