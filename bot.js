@@ -33,7 +33,7 @@ var getgeoip = require('ip-geoinfo');
 var fs = require("fs");
 var requireText = require('require-text');
 let c = "#ff0000";
-let prefix = "!";
+let prefix = "$";
 bot.on("ready", () => {
 	console.log(`Logged in as ${bot.user.tag}, ${bot.user.id}`);
 	bot.user.setStatus("online");
@@ -66,7 +66,7 @@ return;
 
 case "help":
 try {
-message.channel.send(`= COMMANDS =\n\n$minecraft - Generate an Minecraft premium account.\n$spotify - Generate an Spotify premium account.\n$uplay - Generate an UPlay account with games!\n$origin - Generate an origin account with games!\n\nThis bot was created by ${bot.users.get("429199866657243146").username}#${bot.users.get("429199866657243146").discriminator}.`, {code: "asciidoc"}
+message.channel.send(`= COMMANDS =\n\n$minecraft - Generate an Minecraft premium account.\n$spotify - Generate an Spotify premium account.\n$uplay - Generate an UPlay account with games!\n$origin - Generate an origin account with games!\n\nThis bot was created by ${bot.users.get("429199866657243146").username}#${bot.users.get("429199866657243146").discriminator}.`, {code: "asciidoc"});
 } catch(err) {
 	console.log(err);
 	return;
