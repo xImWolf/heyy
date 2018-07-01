@@ -77,7 +77,7 @@ case "eval":
         evaled = require("util").inspect(evaled);
       message.channel.send(clean(evaled), {code:"xl"});
     } catch (err) {
-      message.channel.send(\`\`\`xl\n${clean(err)}\n\`\`\``);
+      message.channel.send(`\`\`\`xl\n${clean(err)}\n\`\`\``);
       return;
     }
 break;
