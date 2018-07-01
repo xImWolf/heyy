@@ -5,10 +5,6 @@ var talkedRecently = new Set();
 var fs = require("fs");
 var text = fs.readFileSync("./minecraft.txt").toString('utf-8');
 var textByLine = text.split("\n")
-// blacklist code jos:
-let bltext = fs.readFileSync("./blacklist.txt").toString('utf-8');
-let blarray = bltext.split("\n");
-//
 const items = JSON.parse(fs.readFileSync('items.json', 'utf8'));
 // uplay
 let uplaytext = fs.readFileSync("./uplay.txt").toString('utf-8');
