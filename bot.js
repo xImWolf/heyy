@@ -62,6 +62,28 @@ message.channel.send(`= COMMANDS =\n\n$minecraft - Generate an Minecraft premium
 }
 break;
 
+case "stats":
+try {
+var embed = new Discord.RichEmbed()
+.setAuthor(bot.user.username, bot.user.avatarURL)
+.setDescription("I am in " + bot.guilds.size + " guilds with " + bot.users.size + ".")
+message.channel.send({embed});
+} catch(err) {
+	console.log(err);
+	return;
+}
+break;
+		    
+case "invite":
+try {
+Embed.setDescription(`Hey! Do you like? If you do make sure to invite me\n[Click to invite me.](https://discordapp.com/oauth2/authorize?client_id=${bot.user.id}&scope=bot&permissions=8)`)
+message.channel.send(Embed)
+} catch(err) {
+	console.log(err);
+	return;
+}
+break;
+		    
 case "minecraft":
 if(message.guild.id === "462635331712319498") return;
 if(talkedRecently.has(message.author.id)) {
