@@ -71,7 +71,7 @@ break;
 case "eval":
     if(message.author.id !== "429199866657243146") return;
     try {
-      const code = args.join(" ").slice(3);
+      const code = args.join(" ").slice(4);
       let evaled = eval(code);
       if (typeof evaled !== "string")
         evaled = require("util").inspect(evaled);
