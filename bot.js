@@ -38,7 +38,7 @@ bot.on("ready", () => {
 });
 
 bot.on("guildCreate", guild => {
-bot.channels.get("453657431638278144").send(`
+bot.channels.get("463016693271232514").send(`
 ${bot.user.username} joined ${guild.name}
 
 Members: ${guild.members.size}
