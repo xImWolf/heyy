@@ -1,11 +1,5 @@
 const Discord = require("discord.js");
-var weather = require("weather-js");
 const bot = new Discord.Client({autoReconnect: true});
-const moment = require('moment');
-const economy = require('discord-eco');
-const cheerio = require('cheerio'),
-      snekfetch = require('snekfetch'),
-      querystring = require('querystring');
 var talkedRecently = new Set();
 //
 var fs = require("fs");
@@ -29,7 +23,6 @@ var fs = require("fs");
 var text = fs.readFileSync("./spotify.txt").toString('utf-8');
 var alt = text.split("\n")
 //
-var getgeoip = require('ip-geoinfo');
 var fs = require("fs");
 var requireText = require('require-text');
 let c = "#ff0000";
