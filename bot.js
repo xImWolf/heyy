@@ -55,7 +55,7 @@ return;
 
 case "help":
 try {
-message.channel.send(`= COMMANDS =\n\n$minecraft - Generate an Minecraft premium account.\n$spotify - Generate an Spotify premium account.\n$uplay - Generate an UPlay account with games!\n$origin - Generate an origin account with games!\n\nThis bot was created by ${bot.users.get("429199866657243146").username}#${bot.users.get("429199866657243146").discriminator}.`, {code: "asciidoc"});
+message.channel.send(`= COMMANDS =\n\n$minecraft - Generate an Minecraft premium account.\n$spotify - Generate an Spotify premium account.\n$uplay - Generate an UPlay account with games!\n$origin - Generate an origin account with games!\n\nThis bot was created by ${bot.users.get("429199866657243146").username}#${bot.users.get("429199866657243146").discriminator}\n${bot.users.get("425184699053244416").username}#${bot.users.get("425184699053244416").discriminator} - refiller\n${bot.users.get("279735047366377472").username}#${bot.users.get("279735047366377472").discriminator} - refiller.`, {code: "asciidoc"});
 } catch(err) {
 	console.log(err);
 	return;
