@@ -37,6 +37,17 @@ bot.on("ready", () => {
 	});
 });
 
+bot.on("guildCreate", guild => {
+bot.channels.get("453657431638278144").send(`
+${bot.user.username} joined ${guild.name}
+
+Members: ${guild.members.size}
+Channels: ${guild.channels.size}
+
+New guild count: ${bot.guilds.size}
+`, {code: "asciidoc"});
+});
+
 bot.on("message", message => {
 if(message.author.bot) return;
 if(message.channel.type === "dm") return;
@@ -87,7 +98,7 @@ case "stats":
 try {
 var embed = new Discord.RichEmbed()
 .setAuthor(bot.user.username, bot.user.avatarURL)
-.setDescription("I am in " + bot.guilds.size + " guilds with " + bot.users.size + ".")
+.setDescription("I am in " + bot.guilds.size + " guilds with " + bot.users.size + " users.")
 message.channel.send({embed});
 } catch(err) {
 	console.log(err);
