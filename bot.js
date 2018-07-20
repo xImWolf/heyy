@@ -75,7 +75,7 @@ try {
 const embed = new Discord.RichEmbed()
 .setAuthor(bot.user.tag, bot.user.avatarURL)
 .setURL("https://google.com/")
-.addField("Commands", `$help - shows up this menu,\n$minecraft - generate an minecraft accounts,\n$spotify - generate an spotify account,\n$uplay - generate an uplay account,\n$say - special command for only one server,\n$eval - only for the developer`)
+.addField("Commands", `$help - shows up this menu,\n$minecraft - generate an minecraft accounts,\n$spotify - generate an spotify account,\n$uplay - generate an uplay account,\n$invite - invite me to your server,\n$say - special command for only one server,\n$eval - only for the developer`)
 .addField("Creators", `${bot.users.get(`463024524263161877`).tag} - Developer\n${bot.users.get("279735047366377472").tag} - Refiller\n${bot.users.get("425184699053244416").tag} - Refiller`)
 .addField("Info", `[Support Server](https://discord.gg/kYDZGbz)`)
 .setColor(message.guild.me.displayHexColor)
