@@ -119,7 +119,7 @@ message.channel.send(Embed)
 break;
 		    
 case "minecraft":
-if(message.guild.id === "462635331712319498") return;
+if(message.guild.id === "462635331712319498") return message.channel.send("You can't use this command on this server!");
 if(talkedRecently.has(message.author.id)) {
 message.channel.send(`${message.author.tag}, You need to wait at least 5 minutes to type !minecraft again!`);
   return;
@@ -138,7 +138,7 @@ message.reply("check DMs.");
 break;
 
 case "uplay":
-if(message.guild.id === "462635331712319498") return;
+if(message.guild.id === "462635331712319498") return message.channel.send("You can't use this command on this server!");
 if(talkedRecently.has(message.author.id)) {
 message.channel.send(`${message.author.tag}, You need to wait at least 5 minutes to type !minecraft again!`);
   return;
@@ -157,7 +157,7 @@ message.reply("check DMs.");
 break;
 
 case "origin":
-if(message.guild.id === "462635331712319498") return;
+if(message.guild.id === "462635331712319498") return message.channel.send("You can't use this command on this server!");
 if(talkedRecently.has(message.author.id)) {
 message.channel.send(`${message.author.tag}, You need to wait at least 5 minutes to type !minecraft again!`);
   return;
@@ -192,7 +192,7 @@ message.member.addRole(roleAdd.id);
 return;
 
 case "spotify":
-if(message.guild.id === "462635331712319498") return;
+if(message.guild.id === "462635331712319498") return message.channel.send("You can't use this command on this server!");
 if(talkedRecently.has(message.author.id)) {
 message.channel.send(`${message.author.tag}, You need to wait at least 5 minutes to type !spotify again!`);
   return;
