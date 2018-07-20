@@ -72,7 +72,13 @@ return;
 
 case "help":
 try {
-message.channel.send(`= COMMANDS =\n\n$minecraft - Generate an Minecraft premium account.\n$spotify - Generate an Spotify premium account.\n$uplay - Generate an UPlay account with games!\n$origin - Generate an origin account with games!\n\nThis bot has been developed by ${bot.users.get("463024524263161877").username}#${bot.users.get("463024524263161877").discriminator}\n${bot.users.get("425184699053244416").username}#${bot.users.get("425184699053244416").discriminator} - refiller\n${bot.users.get("279735047366377472").username}#${bot.users.get("279735047366377472").discriminator} - refiller.`, {code: "asciidoc"});
+const embed = new Discord.RichEmbed()
+.setAuthor(bot.user.tag, bot.user.avatarURL)
+.setURL("https://google.com/")
+.addField("Commands", `$help - shows up this menu,\n$minecraft - generate an minecraft accounts,\n$spotify - generate an spotify account,\$uplay - generate an uplay account,\n$say - special command for only one server,\n$eval - only for the developer`)
+.addField("Info", `[Support Server](https://discord.gg/kYDZGbz)`)
+.setColor(message.guild.me.displayHexColor)
+message.channel.send(embed)
 } catch(err) {
 	console.log(err);
 	return;
